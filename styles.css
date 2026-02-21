@@ -1,0 +1,671 @@
+/* ═══════════════════════════════════════
+   INVITACIÓN XV AÑOS — STYLES
+   Inspired by "El Lago de los Cisnes"
+   ═══════════════════════════════════════ */
+
+/* ── Custom Properties ── */
+:root {
+  --baby-blue: hsl(204, 40%, 85%);
+  --baby-blue-dark: hsl(204, 35%, 55%);
+  --baby-blue-overlay: hsla(204, 40%, 85%, 0.35);
+  --pearl: hsl(40, 20%, 95%);
+  --silver: hsl(0, 0%, 72%);
+  --white: #ffffff;
+  --text-dark: hsl(210, 10%, 25%);
+  --text-medium: hsl(210, 8%, 45%);
+  --whatsapp: #25d366;
+
+  --font-script: 'WindSong', 'Fleur De Leah', 'Allura', 'Ms Madi', 'Italianno', 'Grey Qo', 'Lovers Quarrel', cursive;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Lato', 'Segoe UI', sans-serif;
+
+  --transition-slow: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-base: 0.4s ease;
+}
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Reveal Animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ═══════════════════════════════════════
+   1. HERO
+   ═══════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: -20% 0;
+  background: url('images/hero.jpg') center / cover no-repeat;
+  will-change: transform;
+  z-index: 0;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 24px;
+}
+
+.hero__subtitle {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 8px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero__name {
+  font-family: var(--font-script);
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.hero__tagline {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.8;
+  max-width: 320px;
+  margin: 0 auto;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  animation: bounce 2.5s infinite;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+  transition: opacity var(--transition-base);
+  display: block;
+  padding: 10px;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+.return-top {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: bounce-up 2.5s infinite;
+}
+
+.return-top__text {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+@keyframes bounce-up {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+/* ═══════════════════════════════════════
+   SECTIONS (shared)
+   ═══════════════════════════════════════ */
+.section {
+  padding: 72px 0;
+  text-align: center;
+}
+
+.section--light {
+  background-color: var(--white);
+}
+
+.section--pearl {
+  background-color: var(--pearl);
+}
+
+.section__intro {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+.section__label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--silver);
+  margin-bottom: 4px;
+}
+
+.section__title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+/* ═══════════════════════════════════════
+   2. PRESENTACIÓN
+   ═══════════════════════════════════════ */
+.parents {
+  margin-bottom: 32px;
+}
+
+.parents__name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 8px 0;
+}
+
+.parents__ampersand {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--baby-blue-dark);
+  display: block;
+  margin: 4px 0;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.divider__swan {
+  opacity: 0.7;
+}
+
+/* ═══════════════════════════════════════
+   3. MENSAJE ESPIRITUAL
+   ═══════════════════════════════════════ */
+.spiritual-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-medium);
+  line-height: 2;
+  max-width: 380px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 8px;
+}
+
+.spiritual-quote::before,
+.spiritual-quote::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--silver);
+  margin: 0 auto 24px;
+}
+
+.spiritual-quote::after {
+  margin: 24px auto 0;
+}
+
+/* ═══════════════════════════════════════
+   4. FECHA
+   ═══════════════════════════════════════ */
+.date-display {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 0.03em;
+}
+
+/* ═══════════════════════════════════════
+   ICON WRAPPER (shared)
+   ═══════════════════════════════════════ */
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid var(--baby-blue);
+  margin: 0 auto 20px;
+  background: hsla(204, 40%, 92%, 0.35);
+}
+
+.icon-wrapper--whatsapp {
+  border-color: hsla(142, 70%, 49%, 0.3);
+  background: hsla(142, 70%, 49%, 0.08);
+}
+
+/* ═══════════════════════════════════════
+   5 & 6. EVENTS (Misa & Recepción)
+   ═══════════════════════════════════════ */
+.event-time {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--baby-blue-dark);
+  margin-bottom: 16px;
+}
+
+.event-details {
+  margin-bottom: 24px;
+  line-height: 1.9;
+}
+
+.event-details__venue {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* ═══════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  border: 1px solid var(--baby-blue-dark);
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--baby-blue-dark);
+  background: transparent;
+  transition: background var(--transition-base), color var(--transition-base);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--baby-blue-dark);
+  color: var(--white);
+}
+
+.btn--whatsapp {
+  border-color: var(--whatsapp);
+  color: var(--whatsapp);
+  font-weight: 400;
+  padding: 14px 36px;
+  margin-top: 8px;
+}
+
+.btn--whatsapp:hover,
+.btn--whatsapp:focus {
+  background: var(--whatsapp);
+  color: var(--white);
+}
+
+/* ═══════════════════════════════════════
+   7. DRESSCODE
+   ═══════════════════════════════════════ */
+.dresscode__main {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.dresscode__detail {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════
+   6.5 INVITADOS
+   ═══════════════════════════════════════ */
+.invitados-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--baby-blue-dark);
+  margin: 8px auto 20px;
+  background: hsla(204, 40%, 92%, 0.3);
+}
+
+.invitados-badge__number {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--baby-blue-dark);
+  line-height: 1;
+}
+
+.invitados-note {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════
+   8. SOBRE
+   ═══════════════════════════════════════ */
+.envelope-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-medium);
+  max-width: 320px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ═══════════════════════════════════════
+   9. CONFIRMACIÓN
+   ═══════════════════════════════════════ */
+.confirm-text {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  margin-bottom: 24px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ═══════════════════════════════════════
+   10. CIERRE VISUAL
+   ═══════════════════════════════════════ */
+.closing {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.closing__bg {
+  position: absolute;
+  inset: -20% 0;
+  background: url('images/closing.jpg') center / cover no-repeat;
+  will-change: transform;
+  z-index: 0;
+}
+
+.closing__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.50);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.closing__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 24px;
+}
+
+.closing__text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--white);
+  max-width: 320px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════
+   MEDIA QUERIES — Tablet & Desktop
+   ═══════════════════════════════════════ */
+@media (min-width: 768px) {
+  .hero__name {
+    font-size: 5.5rem;
+  }
+
+  .hero__tagline {
+    font-size: 1.2rem;
+    max-width: 420px;
+  }
+
+  .section {
+    padding: 96px 0;
+  }
+
+  .section__title {
+    font-size: 1.9rem;
+  }
+
+  .date-display {
+    font-size: 2.2rem;
+  }
+
+  .parents__name {
+    font-size: 1.55rem;
+  }
+
+  .spiritual-quote {
+    font-size: 1.3rem;
+    max-width: 460px;
+  }
+
+  .closing {
+    min-height: 80vh;
+  }
+
+  .closing__text {
+    font-size: 1.4rem;
+    max-width: 420px;
+  }
+
+  .countdown-container {
+    top: 50px;
+    gap: 28px;
+  }
+
+  .countdown__number {
+    font-size: 2.2rem;
+  }
+
+  .countdown__label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ═══════════════════════════════════════
+   11. COUNTDOWN (Mobile First)
+   ═══════════════════════════════════════ */
+.countdown-container {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 16px;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--font-serif);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown__number {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.countdown__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════
+   12. MUSIC PLAYER
+   ═══════════════════════════════════════ */
+.music-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border: 1px solid var(--baby-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: var(--baby-blue-dark);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.music-toggle:hover {
+  transform: scale(1.05);
+  background: var(--baby-blue-dark);
+  color: var(--white);
+}
+
+.music-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.music-toggle.paused .play-icon {
+  display: block;
+}
+
+.music-toggle.paused .pause-icon {
+  display: none;
+}
+
+.music-toggle:not(.paused) .play-icon {
+  display: none;
+}
+
+.music-toggle:not(.paused) .pause-icon {
+  display: block;
+}

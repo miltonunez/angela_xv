@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV Años — Ángela</title>
+
+  <!-- SEO & WhatsApp Share -->
+  <meta name="description"
+    content="Estás invitado(a) a celebrar mis XV años. Una noche de ensueño inspirada en El Lago de los Cisnes.">
+  <meta property="og:title" content="Mis XV Años — Ángela">
+  <meta property="og:description" content="Te invito a celebrar conmigo mis XV años. 18 de abril de 2026.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&family=Fleur+De+Leah&family=Allura&family=Ms+Madi&family=Italianno&family=Grey+Qo&family=Lovers+Quarrel&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════
+       1. HERO / PORTADA
+       ═══════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero__bg" data-parallax="0.3"></div>
+    <div class="hero__overlay"></div>
+
+    <!-- Countdown -->
+    <div class="countdown-container">
+      <div class="countdown__item">
+        <span class="countdown__number" id="cd-days">00</span>
+        <span class="countdown__label">Días</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="cd-hours">00</span>
+        <span class="countdown__label">Hrs</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="cd-mins">00</span>
+        <span class="countdown__label">Min</span>
+      </div>
+      <div class="countdown__item">
+        <span class="countdown__number" id="cd-secs">00</span>
+        <span class="countdown__label">Seg</span>
+      </div>
+    </div>
+
+    <div class="hero__content reveal">
+      <p class="hero__subtitle">Mis XV Años</p>
+      <h1 class="hero__name">Ángela</h1>
+      <p class="hero__tagline">Una noche de ensueño, <br>un momento de celebración.<br>Te invito a disfrutar conmigo.
+      </p>
+    </div>
+    <a href="#presentacion" class="scroll-indicator" aria-label="Desplazarse hacia abajo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       2. PRESENTACIÓN
+       ═══════════════════════════════════════ -->
+  <section id="presentacion" class="section section--light">
+    <div class="container reveal">
+      <p class="section__intro">Con la bendición de Dios <br>y el amor de mis padres</p>
+      <div class="parents">
+        <p class="parents__name">Claudia Liliana Núñez Leos</p>
+        <span class="parents__ampersand">&amp;</span>
+        <p class="parents__name">Miguel Ángel Fernández Contreras</p>
+      </div>
+      <!-- Swan-inspired ornament divider -->
+      <div class="divider" aria-hidden="true">
+        <svg class="divider__swan" viewBox="0 0 200 40" width="200" height="40">
+          <!-- Left swan -->
+          <path d="M60 35 C55 30, 40 18, 35 12 C32 8, 30 5, 28 8 C26 10, 28 14, 32 18 C36 22, 45 28, 60 35Z" fill="none"
+            stroke="var(--silver)" stroke-width="1" />
+          <path d="M60 35 C65 32, 75 28, 85 26" fill="none" stroke="var(--silver)" stroke-width="1" />
+          <!-- Center dot -->
+          <circle cx="100" cy="25" r="2" fill="var(--silver)" />
+          <!-- Right swan (mirrored) -->
+          <path
+            d="M140 35 C145 30, 160 18, 165 12 C168 8, 170 5, 172 8 C174 10, 172 14, 168 18 C164 22, 155 28, 140 35Z"
+            fill="none" stroke="var(--silver)" stroke-width="1" />
+          <path d="M140 35 C135 32, 125 28, 115 26" fill="none" stroke="var(--silver)" stroke-width="1" />
+          <!-- Decorative lines -->
+          <line x1="5" y1="25" x2="80" y2="25" stroke="var(--silver)" stroke-width="0.5" opacity="0.5" />
+          <line x1="120" y1="25" x2="195" y2="25" stroke="var(--silver)" stroke-width="0.5" opacity="0.5" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       3. MENSAJE ESPIRITUAL
+       ═══════════════════════════════════════ -->
+  <section id="mensaje" class="section section--pearl">
+    <div class="container reveal">
+      <blockquote class="spiritual-quote">
+        Gracias, Dios, <br>por ser mi guía y mi fortaleza <br>en cada paso de mi vida.<br>
+        Hoy celebro mis XV años <br>con gratitud y alegría.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       4. FECHA
+       ═══════════════════════════════════════ -->
+  <section id="fecha" class="section section--light">
+    <div class="container reveal">
+      <!-- Calendar icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </div>
+      <p class="section__label">Sábado</p>
+      <h2 class="date-display">18 de abril de 2026</h2>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       5. MISA – IGLESIA
+       ═══════════════════════════════════════ -->
+  <section id="misa" class="section section--pearl">
+    <div class="container reveal">
+      <!-- Church icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L12 6" />
+          <path d="M10 4H14" />
+          <path d="M12 6L18 12V22H6V12L12 6Z" />
+          <path d="M9 22V17C9 15.34 10.34 14 12 14C13.66 14 15 15.34 15 17V22" />
+          <line x1="6" y1="22" x2="18" y2="22" />
+        </svg>
+      </div>
+      <h2 class="section__title">Misa de acción de gracias</h2>
+      <p class="event-time">5:00 p.m.</p>
+      <div class="event-details">
+        <p class="event-details__venue">Parroquia La Ascensión del Señor</p>
+        <p>Viviano L. Villarreal No. 483</p>
+        <p>Col. Burócratas del Estado</p>
+        <p>C.P. 64380</p>
+      </div>
+      <a href="https://maps.google.com/?q=Parroquia+La+Ascensión+del+Señor+Bibiano+L.+Villarreal+483+Monterrey"
+        target="_blank" rel="noopener" class="btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Ver ubicación
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       6. RECEPCIÓN – FIESTA
+       ═══════════════════════════════════════ -->
+  <section id="recepcion" class="section section--light">
+    <div class="container reveal">
+      <!-- Celebration icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5.8 11.3L2 22l10.7-3.8" />
+          <path d="M4 3h.01" />
+          <path d="M22 8h.01" />
+          <path d="M15 2h.01" />
+          <path d="M22 20h.01" />
+          <path
+            d="M22 2l-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10" />
+          <path
+            d="M22 13l-1.34-.45a2.9 2.9 0 0 0-3.12 1.96v0a1.526 1.526 0 0 1-1.63 1.45h0a1.8 1.8 0 0 0-1.44 1.76L14 19" />
+        </svg>
+      </div>
+      <h2 class="section__title">Recepción</h2>
+      <p class="event-time">7:30 p.m.</p>
+      <div class="event-details">
+        <p class="event-details__venue">Salón Atrium Anáhuac</p>
+        <p>Grand Salon</p>
+        <p>Plaza Fiesta Anáhuac</p>
+        <p>Av. Manuel L. Barragán No. 325</p>
+        <p>Colonia Anáhuac</p>
+      </div>
+      <a href="https://maps.google.com/?q=Salón+Atrium+Anáhuac+Plaza+Fiesta+Anáhuac+Av.+Manuel+L.+Barragán+325+Monterrey"
+        target="_blank" rel="noopener" class="btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Ver ubicación
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       6.5 NÚMERO DE INVITADOS
+       ═══════════════════════════════════════ -->
+  <section id="invitados" class="section section--pearl">
+    <div class="container reveal">
+      <!-- People icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      </div>
+      <h2 class="section__title">Número de invitados</h2>
+      <div class="invitados-badge">
+        <span class="invitados-badge__number">2</span>
+      </div>
+      <p class="invitados-note">Tu invitación es válida <br>para el número de personas indicado.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       7. CÓDIGO DE VESTIMENTA
+       ═══════════════════════════════════════ -->
+  <section id="dresscode" class="section section--light">
+    <div class="container reveal">
+      <!-- Hanger / dress icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2a3 3 0 0 0-3 3c0 1.66 3 3 3 3s3-1.34 3-3a3 3 0 0 0-3-3z" />
+          <path d="M2 20l10-6 10 6" />
+          <line x1="2" y1="20" x2="22" y2="20" />
+        </svg>
+      </div>
+      <h2 class="section__title">Código de vestimenta</h2>
+      <p class="dresscode__main">Formal</p>
+      <p class="dresscode__detail">Vestido largo</p>
+      <p class="dresscode__detail">Color negro</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       8. INFORMACIÓN DEL SOBRE
+       ═══════════════════════════════════════ -->
+  <section id="sobre" class="section section--pearl">
+    <div class="container reveal">
+      <!-- Envelope icon -->
+      <div class="icon-wrapper">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--baby-blue-dark)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="M22 4L12 13 2 4"></path>
+        </svg>
+      </div>
+      <h2 class="section__title">Lluvia de sobres</h2>
+      <p class="envelope-text">Tu presencia es el mejor regalo, pero si lo deseas, <br>agradecemos tu cariño en forma de
+        sobre.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       9. CONFIRMACIÓN DE ASISTENCIA
+       ═══════════════════════════════════════ -->
+  <section id="confirmar" class="section section--light">
+    <div class="container reveal">
+      <!-- WhatsApp icon -->
+      <div class="icon-wrapper icon-wrapper--whatsapp">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--whatsapp)" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+      </div>
+      <h2 class="section__title">Confirma tu asistencia</h2>
+      <p class="confirm-text">Te agradecemos el confirmar <br>tu asistencia por este medio.</p>
+
+      <!--
+        ═══════════════════════════════════════
+        EDITABLE: Cambia el número y/o mensaje
+        ═══════════════════════════════════════
+        Número: 5218110651395
+        Mensaje: Hola, confirmo mi asistencia a los XV años. Gracias por la invitación.
+      -->
+      <a href="https://wa.me/5218110651395?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os.%20Gracias%20por%20la%20invitaci%C3%B3n."
+        target="_blank" rel="noopener" class="btn btn--whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.511-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        Confirmar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       10. CIERRE VISUAL
+       ═══════════════════════════════════════ -->
+  <section id="cierre" class="closing">
+    <div class="closing__bg" data-parallax="0.3"></div>
+    <div class="closing__overlay"></div>
+    <div class="closing__content reveal">
+      <p class="closing__text">Gracias por acompañarme <br>en este momento tan especial</p>
+    </div>
+    <a href="#hero" class="scroll-indicator return-top" aria-label="Volver al inicio">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+      <span class="return-top__text">Volver al inicio</span>
+    </a>
+  </section>
+
+  <!-- Audio BGM -->
+  <audio id="bg-music" loop preload="auto">
+    <!-- Local Tchaikovsky - Swan Lake audio file -->
+    <source src="musica/Tchaikovsky - Swan Lake (Act II, No. 10) - The Wicked North.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <!-- Toggle button for music -->
+  <button id="music-toggle" class="music-toggle paused" aria-label="Reproducir o pausar música">
+    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <!-- Play icon -->
+      <polygon class="play-icon" points="7 4 19 12 7 20 7 4" />
+      <!-- Pause icon -->
+      <g class="pause-icon">
+        <rect x="6" y="4" width="4" height="16" />
+        <rect x="14" y="4" width="4" height="16" />
+      </g>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
