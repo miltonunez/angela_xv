@@ -586,7 +586,8 @@ a {
     font-size: 1rem;
   }
 
-  .image-wrapper {
+  .image-wrapper,
+  .isolated-svg {
     max-width: 50%;
   }
 }
@@ -604,6 +605,13 @@ a {
   /* Sombra elegante */
 }
 
+.isolated-svg {
+  width: 100%;
+  max-width: 65%;
+  margin: 0 auto 24px;
+  display: block;
+}
+
 .section-image {
   width: 100%;
   height: auto;
@@ -611,7 +619,9 @@ a {
 }
 
 @media (max-width: 480px) {
-  .image-wrapper {
+
+  .image-wrapper,
+  .isolated-svg {
     max-width: 75%;
   }
 }
