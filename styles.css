@@ -135,6 +135,7 @@ a {
   line-height: 1.1;
   margin-bottom: 20px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  font-feature-settings: 'salt' 1, 'swsh' 1, 'ss01' 1;
 }
 
 .hero__tagline {
