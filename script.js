@@ -101,38 +101,42 @@
   /* ── Background Music ── */
   const bgMusic = document.getElementById('bg-music');
   const musicToggle = document.getElementById('music-toggle');
-  let isAudioPlaying = false;
-  let hasInteracted = false;
 
   if (bgMusic && musicToggle) {
-    // Set minimal initial volume if preferred, or leave as default.
     bgMusic.volume = 0.5;
 
-    const initAudio = () => {
-      if (!hasInteracted) {
-        hasInteracted = true;
-        bgMusic.play().then(() => {
-          isAudioPlaying = true;
-          musicToggle.classList.remove('paused');
-        }).catch(err => {
-          // Autoplay was blocked
-          console.log('Automated playback blocked:', err);
-        });
+    let isAudioPlaying = !bgMusic.paused;
+    if (isAudioPlaying) {
+      musicToggle.classList.remove('paused');
+    }
 
-        // Remove listeners
-        window.removeEventListener('click', initAudio);
-        window.removeEventListener('scroll', initAudio);
-        window.removeEventListener('touchstart', initAudio);
-      }
+    const tryPlay = () => {
+      bgMusic.play().then(() => {
+        isAudioPlaying = true;
+        musicToggle.classList.remove('paused');
+        removeInteractionListeners();
+      }).catch(err => {
+        console.log('Autoplay blocked by browser policy:', err);
+      });
     };
 
-    window.addEventListener('click', initAudio, { once: true });
-    window.addEventListener('scroll', initAudio, { once: true, passive: true });
-    window.addEventListener('touchstart', initAudio, { once: true, passive: true });
+    const removeInteractionListeners = () => {
+      window.removeEventListener('click', tryPlay);
+      window.removeEventListener('scroll', tryPlay);
+      window.removeEventListener('touchstart', tryPlay);
+    };
+
+    // Intentar reproducir automáticamente desde el inicio
+    tryPlay();
+
+    // Eventos de respaldo en caso de que el navegador bloquee el autoplay inicial
+    window.addEventListener('click', tryPlay, { once: true });
+    window.addEventListener('scroll', tryPlay, { once: true, passive: true });
+    window.addEventListener('touchstart', tryPlay, { once: true, passive: true });
 
     musicToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      hasInteracted = true; // Mark as interacted so initAudio doesn't step on toggling
+      removeInteractionListeners(); // Interacción explícita, descartar el respaldo
       if (isAudioPlaying) {
         bgMusic.pause();
         musicToggle.classList.add('paused');

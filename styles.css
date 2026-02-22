@@ -139,7 +139,7 @@ a {
 
 .hero__tagline {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-style: italic;
   color: var(--white);
   line-height: 1.8;
@@ -227,7 +227,7 @@ a {
 
 .section__intro {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-medium);
   margin-bottom: 28px;
   line-height: 1.8;
@@ -289,7 +289,7 @@ a {
 .spiritual-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text-medium);
   line-height: 2;
   max-width: 380px;
@@ -348,7 +348,7 @@ a {
    ═══════════════════════════════════════ */
 .event-time {
   font-family: var(--font-serif);
-  font-size: 1.7rem;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--baby-blue-dark);
   margin-bottom: 16px;
@@ -362,7 +362,7 @@ a {
 .event-details__venue {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 4px;
 }
 
@@ -418,7 +418,8 @@ a {
 }
 
 .dresscode__detail {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--text-medium);
   line-height: 1.8;
 }
@@ -440,14 +441,15 @@ a {
 
 .invitados-badge__number {
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--baby-blue-dark);
   line-height: 1;
 }
 
 .invitados-note {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--text-medium);
   max-width: 300px;
   margin: 0 auto;
@@ -460,7 +462,7 @@ a {
 .envelope-text {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: var(--text-medium);
   max-width: 320px;
   margin: 0 auto;
@@ -471,7 +473,8 @@ a {
    9. CONFIRMACIÓN
    ═══════════════════════════════════════ */
 .confirm-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--text-medium);
   margin-bottom: 24px;
   max-width: 300px;
@@ -581,6 +584,35 @@ a {
 
   .countdown__label {
     font-size: 1rem;
+  }
+
+  .image-wrapper {
+    max-width: 50%;
+  }
+}
+
+/* ═══════════════════════════════════════
+   MÓDULOS DE IMAGEN
+   ═══════════════════════════════════════ */
+.image-wrapper {
+  width: 100%;
+  max-width: 65%;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  /* Sombra elegante */
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    max-width: 75%;
   }
 }
 
