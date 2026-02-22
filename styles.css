@@ -15,7 +15,7 @@
   --text-medium: hsl(210, 8%, 45%);
   --whatsapp: #25d366;
 
-  --font-script: 'Fleur De Leah', 'WindSong', 'Allura', 'Ms Madi', 'Italianno', 'Grey Qo', 'Lovers Quarrel', cursive;
+  --font-script: 'WindSong', 'Allura', 'Fleur De Leah', 'Ms Madi', 'Italianno', 'Grey Qo', 'Lovers Quarrel', cursive;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Lato', 'Segoe UI', sans-serif;
 
@@ -236,7 +236,8 @@ a {
 
 .section__label {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--silver);
@@ -287,16 +288,46 @@ a {
 /* ═══════════════════════════════════════
    3. MENSAJE ESPIRITUAL
    ═══════════════════════════════════════ */
+.mensaje-section {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+}
+
+.mensaje__bg {
+  position: absolute;
+  inset: -20% 0;
+  background: url('images/fondo.gif') center / cover no-repeat;
+  will-change: transform;
+  z-index: 0;
+}
+
+.mensaje__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mensaje-section .container {
+  position: relative;
+  z-index: 2;
+}
+
 .spiritual-quote {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.5rem;
-  color: var(--text-medium);
+  color: var(--white);
   line-height: 2;
   max-width: 380px;
   margin: 0 auto;
   position: relative;
   padding: 0 8px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
 }
 
 .spiritual-quote::before,
@@ -305,7 +336,8 @@ a {
   display: block;
   width: 40px;
   height: 1px;
-  background: var(--silver);
+  background: var(--white);
+  opacity: 0.6;
   margin: 0 auto 24px;
 }
 
