@@ -148,4 +148,35 @@
     });
   }
 
+  /* ── Image Blur Preload (Blur-Up) ── */
+  const blurLoadElements = document.querySelectorAll('.blur-load');
+  blurLoadElements.forEach(el => {
+    // Para imágenes comunes
+    if (el.tagName === 'IMG') {
+      const img = new Image();
+      img.src = el.src;
+      img.onload = () => el.classList.add('loaded');
+      img.onerror = () => el.classList.add('loaded');
+      if (img.complete) el.classList.add('loaded');
+    } else {
+      // Para divs con background-image
+      const style = window.getComputedStyle(el);
+      const bgImg = style.backgroundImage;
+      if (bgImg && bgImg !== 'none') {
+        const urlMatch = bgImg.match(/url\(['"]?([^'"]+)['"]?\)/);
+        if (urlMatch && urlMatch[1]) {
+          const img = new Image();
+          img.src = urlMatch[1];
+          img.onload = () => el.classList.add('loaded');
+          img.onerror = () => el.classList.add('loaded');
+          if (img.complete) el.classList.add('loaded');
+        } else {
+          el.classList.add('loaded');
+        }
+      } else {
+        el.classList.add('loaded');
+      }
+    }
+  });
+
 })();

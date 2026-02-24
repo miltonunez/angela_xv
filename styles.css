@@ -533,7 +533,7 @@ a {
 .closing__bg {
   position: absolute;
   inset: -20% 0;
-  background: url('images/xv-102.gif') center / cover no-repeat;
+  background: url('images/xv-119.gif') center / cover no-repeat;
   will-change: transform;
   z-index: 0;
 }
@@ -744,4 +744,16 @@ a {
 
 .music-toggle:not(.paused) .pause-icon {
   display: block;
+}
+
+/* ═══════════════════════════════════════
+   PRECARGA DE IMÁGENES (BLUR-UP)
+   ═══════════════════════════════════════ */
+.blur-load {
+  filter: blur(15px);
+  transition: filter 1s ease-in-out;
+}
+
+.blur-load.loaded {
+  filter: blur(0);
 }
